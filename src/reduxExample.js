@@ -16,8 +16,8 @@ import { selected } from "./reselect";
         return ( 
             
             <div className='div1'>
-            {Object.keys(this.props.data).map((item, index) => {
-                console.log(item)
+            {/* {Object.keys(this.props.data).map((item, index) => {
+                console.log(this.props.data)
                 
                 
                 return (
@@ -27,15 +27,13 @@ import { selected } from "./reselect";
                     
                 </div>
                 )
-            })}
-            {Object.keys(this.props.completed).map((item, index) => {
-                console.log(item)
-                
-                
+            })} */}
+            {this.props.completed.map((item, index) => {
+                console.log(this.props.completed,"selected")
                 return (
                 <div className='div' key ={index}>
-                    <h4>{ item }</h4>
-                    <p>{`${this.props.completed[item]}`}</p>
+                    <h4>{ index }</h4>
+                    <p>{`${this.props.completed[index]}`}</p>
                     
                 </div>
                 )
